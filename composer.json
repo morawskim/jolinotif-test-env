@@ -1,0 +1,11 @@
+{
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "repositories": [
+        {"type": "vcs", "url": "https://github.com/morawskim/JoliNotif"}
+    ],
+    "require": {
+        "jolicode/jolinotif": "dev-libnotify"
+    }
+}
