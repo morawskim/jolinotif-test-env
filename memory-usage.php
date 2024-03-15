@@ -16,7 +16,7 @@ if (!$notifier->isSupported()) {
 for ($i = 0; $i < 4; ++$i) {
     $notification = (new Notification())
         ->setTitle(sprintf('Example via ffi %03d', $i))
-        ->setBody('lorem ipsum dor')
+        ->setBody('Lorem ipsum dolor sit amet, consectetur adipiscing elit')
     ;
     $notifier->send($notification);
     sleep(3);

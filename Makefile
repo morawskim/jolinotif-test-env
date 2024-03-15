@@ -1,6 +1,6 @@
-.PHONY: memory run-without-ffi clean
+.PHONY: test-memory-leaks run-without-ffi clean
 
-memory:
+test-memory-leaks:
 	valgrind --tool=memcheck --leak-check=full php memory-usage.php
 
 run-without-ffi:
