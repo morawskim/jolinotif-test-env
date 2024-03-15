@@ -86,6 +86,25 @@ Vagrant.configure("2") do |config|
     end
   end
 
+  config.vm.define "fedora39", autostart: false do |machine|
+      machine.vm.box = "fedora/39-cloud-base"
+      machine.vm.box_version = "39.20231031.1"
+
+      # Provider-specific configuration so you can fine-tune various
+      # backing providers for Vagrant. These expose provider-specific options.
+      machine.vm.provider "virtualbox" do |vb|
+        configure_virtualbox vb
+      end
+
+      # Enable provisioning with a shell script. Additional provisioners such as
+      # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+      # documentation for more information about their specific syntax and use.
+      machine.vm.provision "shell" do |s|
+        s.path = "fedora.sh"
+        s.args   = [VBoxGuestAdditions, "php83"]
+      end
+  end
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
