@@ -3,6 +3,8 @@
 This repository setup test environment (using Vagrant) to test [JoliNotif](https://github.com/jolicode/JoliNotif).
 JoliNotif is a cross-platform PHP library to display desktop notifications.
 
+Icons downloaded from [numix-icon-theme-circle](https://github.com/numixproject/numix-icon-theme-circle)
+
 ## Usage
 
 Call `vagrant status` to see which virtual machines are provided
